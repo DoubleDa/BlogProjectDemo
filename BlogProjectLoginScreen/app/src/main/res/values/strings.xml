@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BlogProjectLoginScreen</string>
+    <string name="et_username_hint">用户名</string>
+    <string name="et_password_hint">密码</string>
+    <string name="btn_confirm">登录</string>
+    <string name="net_off">网络不给力！</string>
+    <string name="show_pw">显示密码</string>
+    <string name="un_pw_not_null">用户名或密码不能为空！</string>
+    <string name="username_invalid">用户名不合规范！</string>
+    <string name="username_valid">用户名规范！</string>
+    <string name="password_invalid">密码不合规范！</string>
+    <string name="password_valid">密码规范！</string>
+    <string name="login_error">登录失败！</string>
+    <string name="login">登录</string>
+</resources>
