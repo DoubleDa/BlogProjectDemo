@@ -3,6 +3,7 @@ package com.dyx.bpls;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -15,6 +16,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.dyx.bpls.base.BaseActivity;
+import com.dyx.bpls.util.DES3Utils;
+import com.dyx.bpls.util.FileUtils;
 import com.dyx.bpls.util.ValidUtils;
 import com.dyx.bpls.widget.EditTextWithDelete;
 
@@ -204,10 +207,24 @@ public class LoginActivity extends BaseActivity {
 
     private void handleLogin(String username, String password) {
         if (username.equals("dayongxin") && password.equals("qwer1234")) {
+//            SPUtils.put(this, SPUtils.USERNAME, username);
+//            SPUtils.put(this, SPUtils.PASSWORD, password);
+            FileUtils utils = new FileUtils(this);
+            try {
+                String result = utils.readDateFile("blog");
+                if (!TextUtils.isEmpty(result)) {
+                    utils.writeToDateFile("blog", "".getBytes());
+                } else {
+                    utils.writeToDateFile("blog", DES3Utils.encryptMode(password.getBytes()));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             intentTo(MainActivity.class);
             finish();
         } else {
             showSnackbar(btnComfirm, getString(R.string.login_error));
         }
     }
+
 }

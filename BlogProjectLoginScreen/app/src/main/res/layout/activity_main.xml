@@ -28,7 +28,8 @@
             android:layout_weight="4"
             android:drawableRight="@mipmap/icon_delete"
             android:hint="@string/et_password_hint"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:singleLine="true" />
 
         <Button
             android:id="@+id/btn_show_pw"
