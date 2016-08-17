@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         //第四种方法注释
-        //initView();
+        initView();
         //第一种方法：设置LayoutAlgorithm属性
         //useLayoutAlgorithm();
 
@@ -33,10 +33,10 @@ public class MainActivity extends Activity {
         //useView();
 
         //第三种方法：使用DisplayMetrics
-        //useDisplayMetrics();
+        useDisplayMetrics();
 
         //第四种方法：组装html代码
-        generateHtml();
+        //generateHtml();
     }
 
     private void generateHtml() {

@@ -12,6 +12,7 @@
         android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:drawableRight="@mipmap/icon_delete"
         android:hint="@string/et_username_hint" />
 

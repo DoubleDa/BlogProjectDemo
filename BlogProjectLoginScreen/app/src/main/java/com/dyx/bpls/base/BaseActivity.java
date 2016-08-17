@@ -6,8 +6,11 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 
@@ -48,5 +51,15 @@ public abstract class BaseActivity extends Activity {
 
     public void intentTo(Class<?> cla) {
         startActivity(new Intent(this, cla));
+    }
+
+    public void showSnackBarLoc(View myView, String msg) {
+        Snackbar snackbar = Snackbar.make(myView, msg, Snackbar.LENGTH_SHORT);
+        View view = snackbar.getView();
+        ViewGroup.LayoutParams params = view.getLayoutParams();
+        CoordinatorLayout.LayoutParams cl = new CoordinatorLayout.LayoutParams(params.width, params.height);
+        cl.gravity = Gravity.TOP;
+        view.setLayoutParams(cl);
+        snackbar.show();
     }
 }

@@ -6,7 +6,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -71,10 +73,10 @@ public class LoginActivity extends BaseActivity {
                 if (!result.equals("")) {
                     if (ValidUtils.isUserName(result)) {
                         isUsernameEt = true;
-                        showSnackbar(btnComfirm, getString(R.string.username_valid));
+                        showSnackBarLoc(btnComfirm, getString(R.string.username_valid));
                     } else {
                         isUsernameEt = false;
-                        showSnackbar(btnComfirm, getString(R.string.username_invalid));
+                        showSnackBarLoc(btnComfirm, getString(R.string.username_invalid));
                     }
                 } else {
                     isUsernameEt = false;
@@ -102,10 +104,10 @@ public class LoginActivity extends BaseActivity {
                 if (!result.equals("")) {
                     if (ValidUtils.isPassword(result)) {
                         isPasswordEt = true;
-                        showSnackbar(btnComfirm, getString(R.string.password_valid));
+                        showSnackBarLoc(btnComfirm, getString(R.string.password_valid));
                     } else {
                         isPasswordEt = false;
-                        showSnackbar(btnComfirm, getString(R.string.password_invalid));
+                        showSnackBarLoc(btnComfirm, getString(R.string.password_invalid));
                     }
                 } else {
                     isPasswordEt = false;
@@ -116,6 +118,19 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void afterTextChanged(Editable editable) {
 
+            }
+        });
+
+        etPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                boolean isValidKey = keyEvent != null && keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER;
+                boolean isValidAction = actionId == EditorInfo.IME_ACTION_DONE;
+
+                if (isValidKey || isValidAction) {
+                    // do login request
+                }
+                return false;
             }
         });
     }
