@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpeedAndroidProjectBuild.iml" filepath="$PROJECT_DIR$/SpeedAndroidProjectBuild.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-test1/lib-test1.iml" filepath="$PROJECT_DIR$/lib-test1/lib-test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-test2/lib-test2.iml" filepath="$PROJECT_DIR$/lib-test2/lib-test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-test3/lib-test3.iml" filepath="$PROJECT_DIR$/lib-test3/lib-test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-test4/lib-test4.iml" filepath="$PROJECT_DIR$/lib-test4/lib-test4.iml" />
+    </modules>
+  </component>
+</project>
