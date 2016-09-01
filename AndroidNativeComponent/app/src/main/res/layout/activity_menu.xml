@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_basic"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_empty"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_full_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_full_screen"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_login"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_master_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_master_detail"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_navigation_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_navigation_drawer"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_scrolling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_scrolling"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_settings"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_tabbed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_tabbed"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_custom"
+        android:textAllCaps="false" />
+</LinearLayout>
